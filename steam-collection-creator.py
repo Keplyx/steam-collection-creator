@@ -140,16 +140,56 @@ class HelpDialog(QDialog):
         link.linkActivated.connect(self.open_link)
         link.openExternalLinks()
         self.main_layout.addWidget(link)
+        close_button = QPushButton("OK")
+        close_button.clicked.connect(self.close)
+        self.main_layout.addWidget(close_button)
+
+    def open_link(self, url):
+        QDesktopServices.openUrl(QUrl(url))
+
+class ErrorDialog(QDialog):
+    """
+    help window showing information about thee app
+    """
+    def __init__(self, parent=None):
+        QDialog.__init__(self, parent)
+        self.main_layout = QVBoxLayout()
+        self.setLayout(self.main_layout)
+        self.setWindowTitle('Error')
+        title = QLabel("Steam Collection Creator - ERROR")
+        font = title.font()
+        font.bold()
+        font.setPixelSize(20)
+        title.setFont(font)
+        title.setAlignment(Qt.AlignCenter)
+        self.main_layout.addWidget(title)
+        info = QLabel("File 'data.json' missing\nThis app needs a file called 'data.json' next to the executable to work\nGet the default one here:")
+        self.main_layout.addWidget(info)
+        link = QLabel("<a href='https://github.com/Keplyx/steam-collection-creator'>https://github.com/Keplyx/steam"
+                      "-collection-creator</a>")
+        self.main_layout.addWidget(info)
+        link.linkActivated.connect(self.open_link)
+        link.openExternalLinks()
+        self.main_layout.addWidget(link)
+        close_button = QPushButton("OK")
+        close_button.clicked.connect(self.close)
+        self.main_layout.addWidget(close_button)
 
     def open_link(self, url):
         QDesktopServices.openUrl(QUrl(url))
 
 
 if __name__ == '__main__':
-    with(open("data.json")) as f:
+    try:
+        f = open("data.json")
         data = json.load(f, object_pairs_hook=OrderedDict)  # preserve order
         app = QApplication(sys.argv)
         main_window = MainWindow(data)
         main_window.show()
+        f.close()
         sys.exit(app.exec_())
-
+    except EnvironmentError:
+        app = QApplication(sys.argv)
+        main_window = ErrorDialog()
+        main_window.show()
+        sys.exit(app.exec_())
