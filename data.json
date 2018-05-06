@@ -1,0 +1,47 @@
+{
+    "assault" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=750303494",
+        "normal_button_link" : "https://imgur.com/PRN4Xdw.png",
+        "active_button_link" : "https://imgur.com/mDcG4Zx.png"
+    },
+    "cache" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=1104880439",
+        "normal_button_link" : "https://imgur.com/K9xxQ1E.png",
+        "active_button_link" : "https://imgur.com/Sr4kJeo.png"
+    },
+    "inferno" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=715656653",
+        "normal_button_link" : "https://imgur.com/RZWui6r.png",
+        "active_button_link" : "https://imgur.com/cydNyRX.png"
+    },
+    "italy" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=727993009",
+        "normal_button_link" : "https://imgur.com/AvfGucM.png",
+        "active_button_link" : "https://imgur.com/g15rb2T.png"
+    },
+    "militia" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=966071743",
+        "normal_button_link" : "https://imgur.com/27MKBeh.png",
+        "active_button_link" : "https://imgur.com/UAmjZ39.png"
+    },
+    "mirage" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=940310973",
+        "normal_button_link" : "https://imgur.com/hNzrzHc.png",
+        "active_button_link" : "https://imgur.com/pcZ40QC.png"
+    },
+    "office" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=767501224",
+        "normal_button_link" : "https://imgur.com/PxbDtd2.png",
+        "active_button_link" : "https://imgur.com/pcZ40QC.png"
+    },
+    "overpass" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=1362209446",
+        "normal_button_link" : "https://imgur.com/Ignl5Za.png",
+        "active_button_link" : "https://imgur.com/I6Fk6Fs.png"
+    },
+    "vertigo" : {
+        "workshop_link" : "https://steamcommunity.com/sharedfiles/filedetails/?id=723224508",
+        "normal_button_link" : "https://imgur.com/6UfOygs.png",
+        "active_button_link" : "https://imgur.com/wGVslqJ.png"
+    }
+} 
